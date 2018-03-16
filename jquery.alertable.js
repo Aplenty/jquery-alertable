@@ -107,7 +107,7 @@ if(jQuery) (function($) {
     });
 
     // Prevent focus from leaving the modal
-    $(document).on('focus.alertable', '*', function(event) {
+    $(document).on('focus.alertable', function(event) {
       if(!$(event.target).parents().is('.alertable')) {
         event.stopPropagation();
         event.target.blur();
